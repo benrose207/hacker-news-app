@@ -21,7 +21,10 @@ const FeedItem = ({ storyId, idx }) => {
         <article>
           <a href={storyData.url}>{storyData.title}</a>
           <p className="story-details">
-            by {storyData.by} {storyData.time} | <button onClick={toggleCommentsView}>{storyData.descendants} comments</button>
+            by {storyData.by} {storyData.time} |
+            <button onClick={toggleCommentsView}>{storyData.descendants} comments
+              <span>{expanded ? ' ˅' : ' ˄'}</span>
+            </button>
           </p>
         {expanded ? <StoryCommentsIndex commentIds={storyData.kids}/> : null}
         </article>

@@ -17,7 +17,7 @@ const StoryCommentsIndex = ({ commentIds }) => {
     <section>
       <ul>
         {commentIds.slice(0, count).map(commentId => (
-          <Comment key={commentId} commentId={commentId}/>
+          <Comment key={commentId} commentId={commentId} marginOffset="1"/>
         ))}
       </ul>
       {viewMoreButton}
