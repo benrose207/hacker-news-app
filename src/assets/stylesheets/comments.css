@@ -1,0 +1,21 @@
+.comment {
+  margin: 10px 0;
+  font-size: 0.7rem;
+}
+
+.comment > p:first-of-type {
+  color: #9A9A9A;
+}
+
+.comment > p:last-of-type {
+  color: black;
+  font-size: 0.8rem;
+}
+
+.comment > * {
+  margin-bottom: 0.25rem;
+}
+
+.comment button:hover {
+  text-decoration: underline;
+}

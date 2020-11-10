@@ -1,0 +1,26 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: #F6F6EF;
+  font-size: 0.9rem;
+}
+
+.stories-container {
+  padding: 1rem;
+}
+
+nav {
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  font-weight: bold;
+  background-color: #EC6333;
+}

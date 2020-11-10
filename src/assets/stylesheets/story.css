@@ -1,0 +1,24 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.story {
+  display: flex;
+  align-items: baseline;
+  color: #9A9A9A;
+  margin-bottom: 0.5rem;
+}
+
+.story > article {
+  margin-left: 0.5rem;
+  line-height: 1.4;
+}
+
+.story-details {
+  font-size: 0.7rem;
+}
+
+.story-details > button:hover {
+  text-decoration: underline;
+}
