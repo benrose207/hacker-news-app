@@ -19,3 +19,16 @@
 .comment button:hover {
   text-decoration: underline;
 }
+
+.item-expander {
+  font-size: 1rem;
+  margin-left: 0.35rem;
+}
+
+.view-more-btn {
+  color: grey;
+}
+
+.view-more-btn:hover {
+  text-decoration: underline;
+}

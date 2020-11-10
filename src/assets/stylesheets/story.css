@@ -17,6 +17,12 @@ a {
 
 .story-details {
   font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+}
+
+.story-details > button {
+  margin-left: 0.25rem;
 }
 
 .story-details > button:hover {

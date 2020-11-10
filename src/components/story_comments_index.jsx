@@ -10,7 +10,7 @@ const StoryCommentsIndex = ({ commentIds }) => {
   };
 
   const viewMoreButton = commentIds.length > COMMENTS_INCREMENT ? (
-    <button onClick={expandComments}>View More</button>
+    <button className="view-more-btn" onClick={expandComments}>View More</button>
   ) : null;
 
   return (
