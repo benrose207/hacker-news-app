@@ -16,6 +16,7 @@ main {
 }
 
 nav {
+  display: flex;
   width: 90%;
   margin: auto;
   margin-top: 10px;
@@ -23,4 +24,8 @@ nav {
   box-sizing: border-box;
   font-weight: bold;
   background-color: #EC6333;
+}
+
+nav > * {
+  margin-right: 1.5rem;
 }
