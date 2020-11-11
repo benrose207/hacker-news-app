@@ -1,16 +1,15 @@
 import React from 'react';
 import FeedItem from './feed_item';
 import { useInfiniteScroll } from '../utils/useInfiniteScroll';
-import { STORY_TOTAL } from '../constants';
 
 const Feed = ({ storyIds }) => {
   const { count } = useInfiniteScroll();
 
-  const loadingDiv = count < STORY_TOTAL ? (
+  const loadingDiv = (
     <div className="loading">
-      Loading...
+      {count < storyIds.length ? <p>Loading...</p> : null}
     </div>
-  ) : null;
+  );
 
   return (
     <div className="stories-container">

@@ -3,7 +3,7 @@ import '../assets/stylesheets/story.css'
 import AppContext from '../context';
 import { addBookmark, removeBookmark} from '../actions';
 import { getItem } from '../utils/hn_api_util';
-import {getRelativeTime } from '../utils/getRelativeTime';
+import { getRelativeTime } from '../utils/getRelativeTime';
 import StoryCommentsIndex from './story_comments_index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp, faCaretDown, faStar as faSolidStar } from '@fortawesome/free-solid-svg-icons';
@@ -31,15 +31,19 @@ const FeedItem = ({ storyId, idx }) => {
     getItem(storyId).then(result => setStoryData(result));
   }, [storyId]);
 
+  const bookmarkButton = (
+    <button className='item-expander' onClick={toggleBookmark}>
+      {bookmark ? <FontAwesomeIcon icon={faSolidStar} /> : <FontAwesomeIcon icon={faRegularStar} />}
+    </button>
+  )
+
   const listItem = storyData && storyData.url ? (
       <li className="story">
         <span>{`${idx + 1}. `}</span>
         <article>
           <div>
             <a href={storyData.url}>{storyData.title}</a>
-            <button className='item-expander' onClick={toggleBookmark}>
-              {bookmark ? <FontAwesomeIcon icon={faSolidStar} /> : <FontAwesomeIcon icon={faRegularStar} />}
-            </button>
+            {bookmarkButton}
           </div>
           <p className="story-details">
             {`by ${storyData.by} ${getRelativeTime(storyData.time)} | `}
