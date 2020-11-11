@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Route } from 'react-router-dom';
 import { getStoryIds } from '../utils/hn_api_util';
 import NavBar from './navbar';
+import Bookmarks from './bookmarks';
 import Feed from './feed';
 
 const Stories = () => {
@@ -14,7 +16,10 @@ const Stories = () => {
     <>
       <NavBar />
       <main>
-        <Feed storyIds={storyIds}/>
+        <Route path="/" exact>
+          <Feed storyIds={storyIds}/>
+        </Route>
+        <Route path="/bookmarks" component={Bookmarks}/>
       </main>
     </>
   )

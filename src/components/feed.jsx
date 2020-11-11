@@ -1,11 +1,12 @@
-import React, { memo } from 'react';
+import React from 'react';
 import FeedItem from './feed_item';
 import { useInfiniteScroll } from '../utils/useInfiniteScroll';
+import { STORY_TOTAL } from '../constants';
 
 const Feed = ({ storyIds }) => {
   const { count } = useInfiniteScroll();
 
-  const loadingDiv = count < 500 ? (
+  const loadingDiv = count < STORY_TOTAL ? (
     <div className="loading">
       Loading...
     </div>

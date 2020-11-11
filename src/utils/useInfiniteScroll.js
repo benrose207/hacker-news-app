@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-
-const STORY_TOTAL = 500;
-const STORY_INCREMENT = 30;
+import { STORY_TOTAL, STORY_INCREMENT } from '../constants';
 
 export const useInfiniteScroll = () => {
   const [loading, setLoading] = useState(false);
