@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext, memo } from 'react';
 import '../assets/stylesheets/story.css'
 import AppContext from '../context';
 import { addBookmark, removeBookmark} from '../actions';
@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp, faCaretDown, faStar as faSolidStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faRegularStar } from '@fortawesome/free-regular-svg-icons';
 
-const FeedItem = ({ storyId, idx }) => {
+const FeedItem = memo(function FeedItem({ storyId, idx }) {
   const { state, dispatch } = useContext(AppContext);
   const [storyData, setStoryData] = useState({});
   const [expanded, setExpanded] = useState(false);
@@ -60,6 +60,6 @@ const FeedItem = ({ storyId, idx }) => {
       {listItem}
     </>
   );
-};
+});
 
 export default FeedItem;
